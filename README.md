@@ -2,7 +2,7 @@
 
 ## **Project Overview**
 
-This project is a **mini data query simulation engine** that **translates natural language queries into pseudo-SQL statements**. It serves as a lightweight backend service to simulate the functionalities of a **Gen AI Analytics tool**.
+This project **Mini Data Query Simulation Engine** is developed to **translates natural language queries into pseudo-SQL statements**. It serves as a lightweight backend service to simulate the functionalities of a **Gen AI Analytics tool**.
 
 ---
 
@@ -51,12 +51,12 @@ npm install express cors
 
 ### **Run the Server**
 ```sh
-node server.js
+node node.js
 ```
 
 ### **The API will be available at:**
 ```arduino
-http://localhost:3000
+http://localhost:5000
 ```
 
 ---
@@ -89,7 +89,7 @@ http://localhost:3000
 }
 ```
 
-### **2. /explain** - Explain Query Logic
+### **2. /explain** -Returns Simulated Query Breakdown
 
 **Description:** **Returns a breakdown** of how the pseudo-SQL was generated.
 
@@ -139,34 +139,6 @@ http://localhost:3000
 
 ---
 
-## **API Testing Using Postman**
-
-1.**Open Postman**
-
-2.**Create a New Request**
-
-- **Method:** POST
-
-- **URL:** https://gen-ai-backend.onrender.com/query
-
-- **Headers:**
-
-```pgsql
-Key: Content-Type    Value: application/json
-```
-- **Body (raw JSON):**
-
-```json
-{
-  "question": "total sales for January"
-}
-```
-3.**Click "Send"**
-
-4.**Check the Response**
-
----
-
 ## **Deployment on Render**
 
 ### **1. Push Code to GitHub**
@@ -179,7 +151,7 @@ git commit -m "Initial commit"
 
 git branch -M main
 
-git remote add origin https://github.com/yourusername/gen-ai-query-simulation.git
+git remote add origin https://github.com/SurathulEmena/gen-ai-query-simulation.git
 
 git push -u origin main
 ```
@@ -194,41 +166,76 @@ git push -u origin main
 
   - **Runtime:** Node
 
-  - **Build Command:** npm install
+  - **Build Command:** npm install express cors
 
-  - **Start Command:** node server.js
+  - **Start Command:** node node.js
 
   - **Environment Variables:**
 
 ```ini
-PORT = 3000
+PORT = 5000
 ```
 4. Click **"Deploy"**
 
 ### **3. API Base URL**
 ```arduino
-https://gen-ai-backend.onrender.com
+https://gen-ai-query-simulation-3.onrender.com
 ```
 
 ---
 
+## **API Testing Using Postman**
+
+1.**Open Postman**
+
+2.**Create a New Request**
+
+- **Method:** POST
+
+- **URL:** https://gen-ai-query-simulation-3.onrender.com
+
+Include the corresponding API atlast (E.g: https://gen-ai-query-simulation-3.onrender.com/query)
+
+- **Headers:**
+
+```pgsql
+Key: Content-Type    Value: application/json
+
+key: username        Value: admin
+
+key: password        Value: 12345
+```
+The username and the password are for authentication.
+
+- **Body (raw JSON):**
+
+```json
+{
+  "question": "Show all the employees"
+}
+```
+3.**Click "Send"**.
+
+4.**Check the Response**.
+
+---
 
 ## **Notes**
 
-  ✔️ The project satisfies all **technical requirements**
+  ✔️ The project satisfies all **technical requirements**.
 
-  ✔️ Code follows **modular structure** with **clear API routes**
+  ✔️ Code follows **modular structure** with **clear API routes**.
 
-  ✔️ **Error handling** implemented for invalid queries
+  ✔️ **Error handling** implemented for invalid queries.
 
-  ✔️ **Authentication middleware** included (basic security)
+  ✔️ **Authentication middleware** included (basic security).
 
-  ✔️ Deployment completed on **Render with README & Postman collection**
+  ✔️ Deployment completed on **Render with README & Postman collection**.
 
 ---
 
 ## **Contact**
 
-Contact me if there are any additional details or clarifications needed.
+Let me know if there are any additional details or clarifications needed.
 
 **Email id:** surathulemenau@gmail.com
